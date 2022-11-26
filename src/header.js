@@ -1,5 +1,13 @@
 function renderHeader(){
-    var navBar = document.getElementById('nav')
+    var navBar = document.getElementById('header')
+    var logo = document.createElement('div')
+    logo.setAttribute('id','logo')
+    logo.textContent = "Fancy Restaurant"
+
+    var nav = document.createElement('div')
+    nav.setAttribute('id','nav')
+
+
     var homeButton = document.createElement('button')
     homeButton.setAttribute('id', 'home')
     homeButton.textContent = 'Home'
@@ -12,7 +20,8 @@ function renderHeader(){
     contactButton.setAttribute('id', 'contact')
     contactButton.textContent = 'Contact'
 
-    navBar.replaceChildren(homeButton, menuButton, contactButton)
+    nav.replaceChildren(homeButton,menuButton,contactButton)
+    navBar.replaceChildren(logo, nav)
 }
 
 export {renderHeader}

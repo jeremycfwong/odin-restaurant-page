@@ -1,7 +1,7 @@
 function renderContact(){
     var page = document.getElementById('content')
     const heading = document.createElement('h1');
-    heading.textContent = 'Menu'
+    heading.textContent = 'Contact Us'
 
     const cardDiv = document.createElement('div');
     cardDiv.setAttribute('id','card')
