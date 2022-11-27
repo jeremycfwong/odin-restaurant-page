@@ -1,21 +1,21 @@
 h1 {
-    color: red;
+    color: rgb(80, 72, 66);
 }
 
 body {
     display: grid;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: auto 9fr;
     margin: 0;
-    background-color: rgb(218, 205, 181);
+    background-color: rgb(241, 211, 179);
 }
 
 #header {
     display: grid;
     grid-template-columns: 1fr 1fr 5fr;
     align-items: flex-end;
-    background-color: rgb(65, 59, 49);
+    background-color: rgb(101, 100, 124);
     width: 100%;
-    height: 100%;
+    height: 5rem;
 }
 
 #logo {
@@ -28,26 +28,87 @@ body {
 
 #nav {
     grid-column-start: 3;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    align-items: flex-end;
     height: 100%;
 }
 
 button {
-    grid-row-start: 2;
     margin: 0 5vw;
-    padding: .5vh 5vw;
+    padding: .25rem 3rem 0;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
-    background-color: rgb(112, 101, 80);
-    color: wheat;
-    border: rgb(235, 195, 121) 1px solid;
+    background-color: rgb(199, 188, 161);
+    color: rgb(80, 72, 66);
+    border: rgb(199, 188, 161) 1px solid;
     border-bottom: none;
-    height: 100%;
+    height: 50%;
     font-size: 1rem;
+    font-weight: bold;
 }
 
 #content {
     margin: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr;
+}
+
+#content-card {
+    grid-column-start: 2;
+    background-color: rgb(199, 188, 161);
+    padding: 3rem;
+    margin-top: 1rem;
+    border-radius: 12px;
+    display: grid;
+}
+
+.selected{
+    background-color: rgb(241, 211, 179);
+}
+
+.side-by-side {
+    display: grid;
+    grid-template-columns: minmax(400px,1fr) 1fr;
+    margin: 1rem;
+    line-height: 2;
+    color: rgb(41, 37, 33);
+    gap: 2rem;
+    justify-items: center;
+}
+
+.side-by-side img {
+    align-self: center;
+    margin: 0 2rem;
+}
+
+.collapse {
+    background-color: rgb(241, 211, 179);
+    color: #444;
+    cursor: pointer;
+    border-radius: 12px;
+    margin: 0;
+    text-align: left;
+    font-size: 1rem;
+    height: 3rem;
+    margin-top: 2rem;
+  }
+
+  .active {
+    border-radius: 0;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+.collapse:hover {
+    background-color: rgb(41, 37, 33);
+    color: rgb(241, 211, 179);
+  }
+  
+  /* Style the collapsible content. Note: hidden by default */
+.content {
+    padding: 1rem 2rem;
+    display: none;
+    overflow: hidden;
+    margin-top: 0;
+    background-color: rgb(41, 37, 33);
+    color: rgb(241, 211, 179);
 }

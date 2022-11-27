@@ -1,5 +1,8 @@
 function renderContact(){
     var page = document.getElementById('content')
+    const contentCard = document.createElement('div');
+    contentCard.setAttribute('id','content-card');
+
     const heading = document.createElement('h1');
     heading.textContent = 'Contact Us'
 
@@ -26,7 +29,8 @@ function renderContact(){
     bibendum. Nunc convallis vulputate velit vitae vehicula. Nunc nisi arcu, malesuada sit amet tincidunt 
     eget, luctus et purus. Aliquam sit amet scelerisque velit. Nulla ultricies ac nibh id commodo.`
 
-    page.replaceChildren(heading, paragraph, paragraph2);
+    contentCard.replaceChildren(heading, paragraph, paragraph2);
+    page.replaceChildren(contentCard);
 }
 
 export {renderContact}
